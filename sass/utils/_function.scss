@@ -1,0 +1,10 @@
+@function shadowColor($color, $opacity: 0.2){
+    $darkColor : darken($color, 50%);
+    @return rgba($darkColor, $opacity);
+}
+
+@function opacity($color, $opacity: 0.5){
+    @return rgba($color, $opacity);
+}
+
+

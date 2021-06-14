@@ -1,8 +1,10 @@
 /* COLOR */
 
-$primaryColor1: #ff7a7a;
-$primaryColor2: #38cc8c;
+$primaryColor1: rgb(255, 122, 122);
+$primaryColor2: rgb(56, 204, 140);
 
-$secondaryColor1: #6055a5;
-$secondaryColor2: #3e3c49;
-$secondaryColor3: #b9b6d3;
+$secondaryColor1: rgb(96, 85, 165);
+$secondaryColor2: rgb(62, 60, 73);
+$secondaryColor3: rgb(185, 182, 211);
+
+$test: opacify(rgb(185, 182, 211), 0.5)
