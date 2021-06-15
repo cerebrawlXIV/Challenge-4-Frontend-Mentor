@@ -60,7 +60,8 @@ body {
 }
 
 section {
-  background: url(/images/bg-intro-mobile.png) #ff7a7a;
+  background: url(../images/bg-intro-mobile.png) #ff7a7a;
+  background-size: cover;
   width: 100%;
 }
 section div {
@@ -96,6 +97,7 @@ section div:last-child button:first-child {
   line-height: 26px;
   word-spacing: -1px;
   box-shadow: 0 8px 0 rgba(122, 0, 0, 0.2);
+  transition: background-color 0.3s;
 }
 section div:last-child button:first-child span {
   font-weight: 600;
@@ -133,6 +135,19 @@ section div:last-child form input:hover {
 section div:last-child form input:focus {
   border-color: #373456;
 }
+section div:last-child form input.invalid {
+  border: 2px solid #ff7a7a;
+  color: #ff7a7a;
+  background: url("../images/icon-error.svg") no-repeat right 20px top 50%;
+}
+section div:last-child form span {
+  color: #ff7a7a;
+  width: 90%;
+  text-align: right;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
 section div:last-child form button {
   background-color: #38cc8c;
   border: none;
@@ -147,6 +162,7 @@ section div:last-child form button {
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 1px;
+  transition: background-color 0.3s;
 }
 section div:last-child form button:hover {
   background-color: #89e1bb;
@@ -165,6 +181,11 @@ section div:last-child form p {
 section div:last-child form p a {
   color: #ff6161;
   font-weight: bold;
+  transition: color 0.3s;
+}
+section div:last-child form p a:hover {
+  cursor: pointer;
+  color: #ff8e8e;
 }
 
 footer {
@@ -181,6 +202,8 @@ footer a {
 
 @media screen and (min-width: 1024px) {
   section {
+    background: url(../images/bg-intro-desktop.png) #ff7a7a;
+    background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -197,7 +220,7 @@ footer a {
     align-items: flex-start;
   }
   section div:first-child h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 55px;
     font-weight: bold;
     margin: 0;
@@ -208,13 +231,29 @@ footer a {
     text-align: left;
   }
   section div:last-child {
-    width: 46%;
+    width: 54%;
   }
   section div:last-child form {
     padding: 24px 7px;
   }
   section div:last-child form input, section div:last-child form button {
     margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  section div:first-child h1 {
+    font-size: 3rem;
+  }
+  section div:last-child {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  section div:first-child {
+    width: 30%;
+  }
+  section div:last-child {
+    width: 40%;
   }
 }
 

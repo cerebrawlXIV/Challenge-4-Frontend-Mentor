@@ -1,5 +1,6 @@
 section{
-    background: url(/images/bg-intro-mobile.png) $primaryColor1;
+    background: url(../images/bg-intro-mobile.png) $primaryColor1;
+    background-size: cover;
     width: 100%;
     div{
         padding: 30px;
@@ -34,6 +35,7 @@ section{
                 line-height: 26px;
                 word-spacing: -1px;
                 box-shadow: 0 8px 0 shadowColor($primaryColor1);
+                transition: background-color .3s;
                 span{
                     font-weight: 600;
                 }
@@ -69,6 +71,20 @@ section{
                     &:focus{
                         border-color: darken($secondaryColor3, 50%)
                     }
+                    &.invalid{
+                        border: 2px solid $primaryColor1;
+                        color: $primaryColor1;
+                        background: url('../images/icon-error.svg') no-repeat right 20px top 50%;
+                    }
+                }
+                span{
+                    color: $primaryColor1;
+                    width: 90%;
+                    text-align: right;
+                    font-size: .7rem;
+                    font-weight: 600;
+                    margin-top: 8px;
+
                 }
                 button{
                     background-color: $primaryColor2;
@@ -84,6 +100,7 @@ section{
                     font-size: .9rem;
                     font-weight: 500;
                     letter-spacing: 1px;
+                    transition: background-color .3s;
                     &:hover{
                         background-color: lighten($primaryColor2, 20%);
                         box-shadow: 0px 4px 0px lighten($primaryColor2, 5%);
@@ -101,6 +118,11 @@ section{
                     a{
                         color: darken($primaryColor1, 5%);
                         font-weight: bold;
+                        transition: color .3s;
+                        &:hover{
+                           cursor: pointer;
+                           color: lighten($primaryColor1, 4%);
+                        }
                     }
                 }
             }
@@ -122,12 +144,15 @@ footer{
 
 @media screen and (min-width: 1024px){
     section{
+        background: url(../images/bg-intro-desktop.png) $primaryColor1;
+        background-size: cover;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 60px;
         column-gap: 60px;
+
         div{
             &:first-child{
                 width: 40%;
@@ -137,7 +162,7 @@ footer{
                 justify-content: center;
                 align-items: flex-start;
                 h1{
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                     line-height: 55px;
                     font-weight: bold;
                     margin: 0;
@@ -149,7 +174,7 @@ footer{
                 }
             }
             &:last-child{
-                width: 46%;
+                width: 54%;
                 form{
                     padding: 24px 7px;
                     input, button {
@@ -158,6 +183,35 @@ footer{
                 }
             }
 
+        }
+    }
+}
+
+
+@media screen and (min-width: 1240px){
+    section{
+        div{
+            &:first-child{
+                h1{
+                    font-size: 3rem;
+                }
+            }
+            &:last-child{
+                width: 48%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1500px){
+    section{
+        div{
+            &:first-child{
+                width: 30%;
+            }
+            &:last-child{
+                width: 40%;
+            }
         }
     }
 }
